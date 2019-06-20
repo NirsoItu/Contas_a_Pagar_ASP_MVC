@@ -1,0 +1,63 @@
+﻿@model IEnumerable<Trabalho_Rogerio.Models.Contas>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Cadastro de Contas</h2>
+
+<p>
+    @Html.ActionLink("Criar Nova Conta", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Fornecedor)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Dtvencimento)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Dtpagamento)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Pago)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Descricao)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Valor)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Fornecedor)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Dtvencimento)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Dtpagamento)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Pago)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Descricao)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Valor)
+        </td>
+        <td>
+            @Html.ActionLink("Editar", "Edit", new { id=item.ContasId }) |
+            @Html.ActionLink("Detalhes", "Details", new { id=item.ContasId }) |
+            @Html.ActionLink("Deletar", "Delete", new { id=item.ContasId })
+        </td>
+    </tr>
+}
+
+</table>

@@ -1,0 +1,66 @@
+﻿@model Trabalho_Rogerio.Models.Contas
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Contas</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Fornecedor)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Fornecedor)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Dtvencimento)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Dtvencimento)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Dtpagamento)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Dtpagamento)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Pago)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Pago)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Descricao)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Descricao)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Valor)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Valor)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Editar", "Edit", new { id = Model.ContasId }) |
+    @Html.ActionLink("Voltar a Lista", "Index")
+</p>
